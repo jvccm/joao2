@@ -1,0 +1,70 @@
+:root {
+  --cinza: #aaa;
+  --vermelha: #130204;
+  --vermelha-escura: #303faf;
+  --branca: #fff;
+  --luz: rgb(63, 207, 243);
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(45deg, #f19a0e 0%,#cf4914 100%);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  min-height: 100vh;
+  background-image: url("https://e0.pxfuel.com/wallpapers/650/592/desktop-wallpaper-dark-blue-hexagon-background-blue-neon-lights-blue-hexagon-neon-background-hexagons-with-neon-lights-blue-3d-hexagon-background.jpg");
+  
+  
+}
+
+h1 {
+  color: var(--branca);
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.teclado {
+  background: linear-gradient(to bottom, #eeeeee 0%,#240126d8 100%);
+  box-shadow: 6px 8px 0 6px #630caa, 10px 10px 10px #000;
+  border-radius: 30px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.tecla {
+  background-color: var(--branca);
+  border-radius: 30px;
+  box-shadow: 3px 3px 0 var(--cinza);
+  color: var(--vermelha);
+  cursor: pointer;
+  height: 120px;
+  font-size: 1.75em;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  width: 120px;
+}
+
+.tecla.ativa,
+.tecla:active {
+  background-color: var(--vermelha);
+  border: 4px solid  var(--vermelha);
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+  color: var(--branca);
+  outline: none;
+}
+
+.tecla.focus,
+.tecla:focus {
+  outline: none;
+  box-shadow: 1px 1px 10px var(--luz);
+}
+
+.tecla.active:focus,
+.tecla:active:focus {
+  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+}
